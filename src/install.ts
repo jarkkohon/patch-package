@@ -12,7 +12,7 @@ export default function install(appPath: string) {
     if (existsSync(join(appPath, "node_modules", "yarn"))) {
       printIncompatibleYarnError()
     } else {
-      printNoYarnError()
+      printNoYarnInfo()
     }
   }
 }
@@ -25,9 +25,6 @@ version of yarn. Please update both.`)}
 `)
 }
 
-function printNoYarnError() {
-  console.error(`
-${red.bold("***ERROR***")}
-${red(`patch-package requires yarn as a local peer-dependency`)}
-`)
+function printNoYarnInfo() {
+  console.log('patch-package patches will be limited to yarn add|install phases withouth local yarn as dev depency')
 }
