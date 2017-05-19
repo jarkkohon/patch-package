@@ -26,5 +26,6 @@ version of yarn. Please update both.`)}
 }
 
 function printNoYarnInfo() {
-  console.log('patch-package patches will be limited to yarn add|install phases withouth local yarn as dev depency')
+  console.log("FYI: patch-package patches will be limited to yarn add|install " +
+    "phases withouth local yarn as dev depency\n")
 }
